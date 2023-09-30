@@ -5,9 +5,6 @@ import Navbar from "../Navbar/Navbar";
 import { useParams } from "react-router";
 
 const ProfilePage = () => {
-  const getTruncatedLocation = (value) => {
-    return value?.replace("-", "");
-  };
   const params = useParams();
   const [user, setUser] = useState(
     JSON.parse(localStorage.getItem("currentUser"))
@@ -98,11 +95,7 @@ const ProfilePage = () => {
             <div className={styles.addressMap}>
               <iframe
                 title={`${user.username} location`}
-                src={`https://maps.google.com/maps?q=${getTruncatedLocation(
-                  user.address.geo.lat
-                )},${getTruncatedLocation(
-                  user.address.geo.lng
-                )}&hl=es;&output=embed`}
+                src={`https://maps.google.com/maps?q=${user.address.geo.lat},${user.address.geo.lng}&hl=es;&output=embed`}
                 className={styles.map}
               />
               <div className={styles.locationInfo}>
