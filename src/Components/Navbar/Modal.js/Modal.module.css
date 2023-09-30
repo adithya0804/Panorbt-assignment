@@ -1,0 +1,54 @@
+.modal{
+    position: absolute;
+    width: 20rem;
+    height: 28rem;
+    background-color: var(--white-color);
+    top: 8rem;
+    right: 4rem;
+    border-radius: 3rem;
+    z-index: 10;
+    border:1px solid var(--grey-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.userInfo{
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #a2a6a6 ;
+
+}
+.imageContainer{
+    height: 60%;
+    object-fit: contain;
+}
+.name{
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+.email{
+    color: #a2a6a6;
+}
+.accountsSection{
+    margin-left: 1rem;
+    margin-top: 1rem;
+    max-height: 30%;
+    width: 90%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.signout{
+    background-color: #ff4747;
+    color: var(--white-color);
+    align-self: center;
+    justify-self: center;
+    padding: 0.5rem 1rem;
+    margin-top: 2rem;
+    border-radius: 2rem;
+    cursor: pointer;
+}

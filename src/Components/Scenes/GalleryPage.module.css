@@ -1,0 +1,16 @@
+.wrapper{
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+}
+.rightSection{
+    width: 70%;
+    margin-top: 5rem;
+}
+.commingSoon{
+font-size: 5rem;
+text-align: center;
+margin-top: 14rem;
+color: #a2a6a6 ;
+}
