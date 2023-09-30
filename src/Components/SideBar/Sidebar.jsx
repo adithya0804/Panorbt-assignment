@@ -1,23 +1,46 @@
 import React, { useState } from "react";
 import styles from "./Sidebar.module.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 const Sidebar = () => {
   const [user] = useState(JSON.parse(localStorage.getItem("currentUser")));
   return (
     <div className={styles.wrapper}>
       <div className={styles.navlist}>
-        <Link to={`/${user?.username}`} className={styles.navItem}>
+        <NavLink
+          to={`/${user?.username}`}
+          className={({ isActive }) =>
+            isActive ? styles.active : styles.notActive
+          }
+        >
           Profile
-        </Link>
-        <Link to={"/post"} className={styles.navItem}>
+        </NavLink>
+        <hr />
+        <NavLink
+          to={"/post"}
+          className={({ isActive }) =>
+            isActive ? styles.active : styles.notActive
+          }
+        >
           Posts
-        </Link>
-        <Link to={"/gallery"} className={styles.navItem}>
+        </NavLink>
+        <hr />
+        <NavLink
+          to={"/gallery"}
+          className={({ isActive }) =>
+            isActive ? styles.active : styles.notActive
+          }
+        >
           Gallery
-        </Link>
-        <Link to={"/todo"} className={styles.navItem}>
+        </NavLink>
+        <hr />
+        <NavLink
+          to={"/todo"}
+          className={({ isActive }) =>
+            isActive ? styles.active : styles.notActive
+          }
+        >
           ToDo
-        </Link>
+        </NavLink>
       </div>
     </div>
   );
