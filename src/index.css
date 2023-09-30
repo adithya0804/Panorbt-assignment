@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
 :root{
-  --primary-color: #34C94B;
+  --primary-color: #6130b0;
  --black-color:#121212;
   --white-color:#fff;
+  --grey-color:#f2f2f2;
+  --blue-color:#2637f0;
 }
 *,*::before,*::after{
   box-sizing: border-box;
@@ -49,4 +51,23 @@ h4,
 h5,
 h6{
   overflow-wrap: break-word;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
